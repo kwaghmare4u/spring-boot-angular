@@ -1,6 +1,7 @@
 spring:
   datasource:
-    url: jdbc://mysql://localhost:8080/employee_management_system?useSSL=false
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/employee_management_system
     username: root
     password: root
   jpa:
@@ -8,3 +9,5 @@ spring:
       hibernate:
         dialect: org.hibernate.dialect.MySQL5InnoDBDialect
         ddl-auto: update
+    show-sql: true
+    generate-ddl: true
